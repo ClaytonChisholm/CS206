@@ -1,4 +1,5 @@
 import pyrosim.pyrosim as pyrosim
+import random
 
 
 
@@ -49,6 +50,15 @@ def Generate_Brain():
     pyrosim.Send_Sensor_Neuron(name=2, linkName="Frontleg")
     pyrosim.Send_Motor_Neuron(name=3, jointName="Torso_Backleg")
     pyrosim.Send_Motor_Neuron(name=4, jointName="Torso_Frontleg")
+
+    for i in range(0, 3):
+
+        for j in range(3, 5):
+            weight = random.uniform(-1, 1)
+            print("weight", weight)
+            pyrosim.Send_Synapse(sourceNeuronName=i, targetNeuronName=j, weight=weight)
+
+
     pyrosim.End()
 
 

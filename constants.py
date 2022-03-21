@@ -33,3 +33,5 @@ offsetTorso_BackLeg = 0
 amplitudeFrontLeg_Torso = math.pi/4.0
 frequencyFrontLeg_Torso = 1/20.0
 offsetFrontLeg_Torso = 0
+
+numberOfGenerations = 10
