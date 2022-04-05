@@ -34,7 +34,7 @@ class MOTOR:
 
             controlMode=p.POSITION_CONTROL,
 
-            targetPosition=desiredAngel,
+            targetPosition=desiredAngel * c.motorJoinRange,
 
             maxForce=500)
         pass

@@ -22,7 +22,7 @@ targetAnglesHigh = 1000
 gravity = -9.8
 zero = 0
 
-FPS = 1/60
+FPS = 1/30
 
 LegSensorValues = 1000
 
@@ -35,3 +35,15 @@ frequencyFrontLeg_Torso = 1/20.0
 offsetFrontLeg_Torso = 0
 
 numberOfGenerations = 10
+
+populationSize = 10
+
+numSensorNeurons = 9
+
+
+numMotorNeurons = 8
+
+sensors = numpy.arange(numSensorNeurons)
+motors = numpy.arange(numSensorNeurons,numMotorNeurons)
+
+motorJoinRange = 0.5

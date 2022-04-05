@@ -14,16 +14,19 @@ from robot import ROBOT
 
 class SIMULATION:
     # Constructor
-    def __init__(self, directOrGui):
+    def __init__(self, directOrGui, solutionID):
+        self.solutionID = solutionID
+        self.directOrGui = directOrGui
         if directOrGui == "DIRECT":
             self.physicsClient = p.connect(p.DIRECT)
         else:
             self.physicsClient = p.connect(p.GUI)
+
         p.setAdditionalSearchPath(pybullet_data.getDataPath())
         p.setGravity(0, 0, -50)
 
         self.world = WORLD()
-        self.robot = ROBOT()
+        self.robot = ROBOT(self.solutionID)
 
     def Run(self):
         for i in range(300):
